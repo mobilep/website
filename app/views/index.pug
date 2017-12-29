@@ -1,0 +1,224 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Mobile Practtice
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    // build:css styles/vendor.css
+    link(rel='stylesheet', href='/bower_components/normalize-css/normalize.css')
+    link(href='https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,600,700|Roboto', rel='stylesheet')
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+  body
+    //if IE
+      p.browserupgrade
+        | You are using an 
+        strong outdated
+        |  browser. Please 
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+    .wrapper 
+      .header 
+        .container
+          .flex.flex_between.flex_v-center
+            .flex-side
+              a(href="/").header__logo Mobile Practice
+            .flex-side
+              .header__btn
+                span.header__btn_section
+                span.header__btn_section
+                span.header__btn_section
+                span.header__btn_section
+                span.header__btn_section
+                span.header__btn_section
+              ul.header__nav 
+                li.header__li.header__li_active  
+                  a(href="#section-2").header__a What we do
+                li.header__li 
+                  a(href="#section-3").header__a How it works
+                li.header__li 
+                  a(href="#section-4").header__a Features
+                li.header__li 
+                  a(href="#section-5").header__a About us
+                li.header__li 
+                  a(href="#section-6").header__a Contacts
+      section#section-1.section-1
+        .container
+          .section-1__box
+            .section-1__side.section-1__side_left
+              h1.section-1__title Mobile technology for teams to practice, share and coach each  other  anytime anywhere, for personal & team performance.
+              a(href="#").section-1__button.btn book a demo
+            .section-1__side.section-1__side_right
+              figure.section-1__figure   
+                img(src="/images/png/section-1.png", alt="section-1")
+      section#section-2.section-2
+        .container
+          h2.text-center.section-2__title What we do & how we do it
+          .section-2__list
+            .section-2__item 
+              figure.section-2__figure 
+                img.section-2__img(src='/images/svg/make_personal.svg', alt="make personal")
+              .section-2__text Make personal & professional development an easy, integrated & valued part of everyday business life.
+            figure.section-2__center-figure
+              img(src="/images/png/section-2_254x375.png", srcset="/images/png/section-2_254x375.png 1024w", alt="section 2")
+            .section-2__item 
+              figure.section-2__figure 
+                img.section-2__img(src='/images/svg/providing.svg', alt="providing")
+              .section-2__text By providing more opportunities for more people  to practice, share & coach each other for personal & team performance.
+      section#section-3.section-3
+        .container
+          h2.section-3__title How it works?
+          .section-3__list
+            article.section-3__item
+              h3.section-3__name
+                span.section-3__number 1
+                span Create & Distribute scenarios
+              figure.section-3__figure  
+                img.section-3__img(src="/images/png/section-3-1.png", alt="Create & Distribute scenarios")
+            article.section-3__item
+              h3.section-3__name
+                span.section-3__number 2
+                span Practice, Record, Submit
+              figure.section-3__figure  
+                img.section-3__img(src="/images/png/section-3-2.png", alt="Practice, Record, Submit")
+            article.section-3__item
+              h3.section-3__name
+                span.section-3__number 3
+                span Review Feedback & Share
+              figure.section-3__figure  
+                img.section-3__img(src="/images/png/section-3-3.png", alt="Review Feedback & Share")
+      section#section-4.section-4
+        .container
+          h2.section-4__heading Product features
+          .section-4__list
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/coaching_criteria.svg", alt="img")
+              h3.section-4__title Coaching Criteria
+              p.section-4__text Define criteria that reflect the desired observable performance from your team
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/reporting.svg", alt="img")
+              h3.section-4__title Reporting
+              p.section-4__text Measure and manage your team and team members performance, coaching and training needs
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/encourage_coaching_culture.svg", alt="img")
+              h3.section-4__title Encourage Coaching culture
+              p.section-4__text Intuitive interface to create practice scenarios and share with team members
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/multi_languare_support.svg", alt="img")
+              h3.section-4__title Multi-language support 
+              p.section-4__text For fast and economic international deployments
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/enterprise.svg", alt="img")
+              h3.section-4__title Enterprise ready
+              p.section-4__text Mirror structure geographically and functionally. Data metrics for performance & participation to complement LMS & CRM.
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/social_learning.svg", alt="img")
+              h3.section-4__title Social Learning
+              p.section-4__text Share best practice among team members, where everyone is the student, and everyone is the teacher
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/offline.svg", alt="img")
+              h3.section-4__title Accessibility & convenience 
+              p.section-4__text Practice, record, review and coach offline  anytime anywhere
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/native_functionality.svg", alt="img")
+              h3.section-4__title Native functionality with secure access
+              p.section-4__text To ensure unrivalled user experience
+            article.section-4__item
+              figure.section-4__figure
+                img.section-4__img(src="/images/svg/integration.svg", alt="img")
+              h3.section-4__title Integration
+              p.section-4__text Integration with your LMS and CRM systems to provide greater cross analysis
+      section#section-5.section-5
+        .container
+          h2.section-5__title About us
+          .section-5__list 
+            article.section-5__item
+              figure.section-5__figure
+                img.section-5__img(src="/images/png/arthur-choukroun.png", alt="Arthur Choukroun")
+              h3.section-5__name Arthur Choukroun
+              .section-5__position Co-Founder
+              .section-5__text 15 years in purchasing, sales & training, CEO of Skillsday: E-learning
+              a.section-5__email(href="mailto:arthur@mobilepractice.io", tatget="blank") arthur@mobilepractice.io
+            article.section-5__item
+              figure.section-5__figure
+                img.section-5__img(src="/images/png/ben-eddy.png", alt="Ben Eddy")
+              h3.section-5__name Ben Eddy
+              .section-5__position Co-Founder
+              .section-5__text 20 years sales, consulting & training in Enterprise Organisations
+              a.section-5__email(href="mailto:ben@mobilepractice.io", tatget="blank") ben@mobilepractice.io
+            article.section-5__item
+              figure.section-5__figure
+                img.section-5__img(src="/images/png/tama-puglsey.png", alt="Tama Puglsey")
+              h3.section-5__name Tama Puglsey
+              .section-5__position CTO
+              .section-5__text >15 years experience CTO, & Technical director: end user & agencies
+              a.section-5__email(href="tama@mobilepractice.io", tatget="blank") tama@mobilepractice.io
+      section#section-6.section-6
+        figure.section-6__center-figure
+              img(src="/images/png/section-6_396x333.png", srcset="/images/png/section-6_704x587.png 768w,    /images/png/section-6_733x617.png 1200w", alt="section 2")
+        .section-6__red-box
+          .container
+            h2.section-6__title Book a demo
+            P.section-6__text or сontact for more information:
+            form.form.section-6__form(action="")
+              input.form__input.form__input_text.section-6__input(type="text", placeholder="Your email here…")
+              input.form__input.form__input_submit.section-6__submit(type="submit" value="submit")
+      section#section-7.section-7.text-center
+        .container
+          h2.section-7__title Check out our app
+          P.section-7__text Download Mobile Practice and start learning today
+          .section-7__list
+            a.section-7__item(href="#")
+              img.section-7__img(src="/images/png/app-store.png", alt="app store")
+            a.section-7__item(href="#")
+              img.section-7__img(src="/images/png/google-play.png", alt="google play")
+      div#section-8.section-8
+        .container
+          .section-8__list
+            a.btn.btn_color_red.section-8__btn(href="http://") book a demo
+            .section-8__box
+              ul.section-8__ul
+                li.section-8__li
+                  a.section-8__a(href="http://") Privacy policy
+                li.section-8__li
+                  a.section-8__a(href="http://") Help center
+                li.section-8__li
+                  a.section-8__a(href="http://") Contact us
+              ul.section-8__ul.section-8__ul_size_l
+                li.section-8__li 
+                  a.section-8__a(href="http://") Français
+                li.section-8__li.section-8__li_active
+                  a.section-8__a(href="http://") English
+      footer.footer
+        .container
+          .footer__box
+            .social.footer__social
+              a.social__item.social__item_in(href="#")
+              a.social__item.social__item_tw(href="#")
+              a.social__item.social__item_fb(href="#")
+            .footer__flex
+              a.logo.footer__logo(href="http://") logo
+              p.footer__text © 2017 Mobile Practice. All rights reserved.
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbower
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild

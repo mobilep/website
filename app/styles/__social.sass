@@ -1,0 +1,22 @@
+.social
+  &__list
+    font-size: 0
+  &__item 
+    width: 32px
+    height: 32px 
+    margin: 0 12px
+    background: gray
+    display: inline-block
+    vertical-align: middle
+    &:hover
+      cursor: pointer
+      opacity: 0.8
+    &_in
+      background: url('../images/svg/linkedin.svg') center no-repeat
+    &_tw
+      background: url('../images/svg/twitter.svg') center no-repeat
+    &_fb
+      background: url('../images/svg/facebook.svg') center no-repeat
+  @media (min-width: 1200px)
+    &__item
+      margin: 0 15px

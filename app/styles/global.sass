@@ -1,0 +1,56 @@
+* 
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  box-sizing: border-box
+
+figure 
+  padding: 0
+  margin: 0
+
+a 
+  font-weight: normal
+
+input::-webkit-input-placeholder
+  color: #9B9B9B
+input::-moz-placeholder
+  color: #9B9B9B
+input:-ms-input-placeholder
+  color: #9B9B9B
+input:-moz-placeholder
+  color: #9B9B9B
+
+body 
+  color: #373A36
+  background: #fff
+  min-width: 320px
+  font-family: 'OpenSans', sans-serif
+  &.header__btn_active
+    overflow: hidden
+
+.flex
+  display: flex
+  &_center
+    align-items: center
+    justify-content: center
+  &_v-center
+    align-items: center
+  &_h-center
+    justify-content: center
+  &_between
+    justify-content: space-between
+  
+.logo
+  width: 32px
+  height: 32px 
+  font-size: 0
+  display: inline-block
+  vertical-align: middle
+  background: url('../images/png/logo_mobile_pactice_simple.png') center no-repeat
+  background-size: contain
+  &:link:hover
+    cursor: pointer
+    opacity: 0.8
+  @media (min-width: 1200px)
+    width: 49px
+    height: 49px
+    
