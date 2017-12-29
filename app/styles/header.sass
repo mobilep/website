@@ -67,9 +67,6 @@
       width: 100%
       margin: 0 auto
       padding: 0 25px
-      opacity: 0.71
-      &_active, &:hover 
-        opacity: 1
     &__a 
       border-bottom: 1px solid rgba(#FFFFFF, 0.48)
       display: block
@@ -81,6 +78,10 @@
       margin: 0
       color: #fff 
       text-decoration: none
+      trasition: 0.3s
+      opacity: 0.71
+      &.active, &:hover 
+        opacity: 1
   @media (min-width: 320px) and (max-width: 767px)
     &__li
       max-width: 540px
@@ -133,19 +134,20 @@
       text-transform: uppercase
       padding: 17px
       line-height: 1
-      opacity: 0.71
       &:first-of-type
         padding-left: 0
       &:last-of-type
         padding-right: 0
-      &_active, &:hover 
-        opacity: 1
     &__a 
       color: #fff 
       text-decoration: none
       font-weight: 700
       line-height: 1
       font-size: 12px
+      opacity: 0.71
+      transition: 0.3s
+      &.active, &:hover 
+        opacity: 1
     &__btn
       display: none
   @media (min-width: 1200px)
