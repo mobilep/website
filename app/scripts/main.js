@@ -4,7 +4,7 @@ $(document).ready(() => {
   var $scrollStatus = $('.scroll-status');
 
   let top = 70;
-  if ($('body').width() > 767) {
+  if($('body').width() > 767) {
     top = 90;
   }
 
@@ -25,13 +25,12 @@ $(document).ready(() => {
     }
   });
 
-  $('.header__nav').on('click', '.header__a', (e) => {
+  $('.header__nav').on('click', '.header__a', e => {
     e.preventDefault();
     $('.header__nav ul').slideToggle('fast');
     $(e.target).closest('body').removeClass('header__btn_active');
     $(e.target).closest('body').find('.header__btn').toggleClass('header__btn_active');
   });
-
 });
 
 $(window).on('load resize scroll', () => {
@@ -47,7 +46,7 @@ function clickHeaderBtn() {
 function headerSticky() {
   const sticky = $('.header');
   const scroll = $(window).scrollTop();
-  if (scroll >= 1) {
+  if(scroll >= 1) {
     sticky.addClass('header_fixed');
   } else {
     sticky.removeClass('header_fixed');
