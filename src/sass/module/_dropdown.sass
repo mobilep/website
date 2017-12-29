@@ -1,0 +1,123 @@
+.select-style
+  position: relative
+  display: inline-block
+  padding-top: 4px
+  max-width: 100%
+  width: 100%
+  &_active
+    .select-style__dropdown
+      display: block
+  &_left
+    .select-style
+      &__dropdown
+        left: 50px
+        &:before
+          left: 18px
+  &_right
+    .select-style
+      &__dropdown
+        right: -12px
+        &:before
+          right: 18px
+  &__title
+    font-size: 15px
+    color: #F3423C
+    padding-bottom: 14px
+  &__arrow
+    width: 0
+    height: 0
+    border-left: 6px solid transparent
+    border-right: 6px solid transparent
+    border-top: 6px solid
+    margin: 0 5px
+    color: #F3423C
+    top: 11px
+    right: 0
+    display: inline-block
+    vertical-align: middle
+  &__text
+    display: inline-block
+    vertical-align: middle
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden
+    max-width: calc(100% - 30px)
+    &_bold
+      font-weight: 600
+  &__dropdown
+    display: none
+    position: absolute
+    top: 95%
+    text-align: left
+    font-size: 15px
+    max-width: 250px
+    padding: 10px 20px 11px
+    margin: 0
+    list-style-type: none
+    background: #fff
+    border: 1px solid #F3423C
+    border-radius: 4px
+    z-index: 999
+    &:before
+      content: ''
+      width: 8px
+      height: 8px
+      border: 1px solid #F3423C
+      border-bottom: none
+      border-left: none
+      transform: rotate(-45deg)
+      position: absolute
+      top: -5px
+      right: 18px
+      background: #fff
+  &__group
+    border-top: 1px solid #E1E3E5
+    border-bottom: 1px solid #E1E3E5
+    padding: 25px 20px 10px
+    margin: 11px -20px
+  &__group-title
+    text-transform: uppercase
+    opacity: 1
+    font-size: 12px
+    color: #93989A
+    letter-spacing: 0
+    margin-bottom: 10px
+  &__item
+    background: #fff
+    color: #309FFF
+    line-height: 30px
+    cursor: pointer
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    &:hover
+      color: lighten(#309FFF, 10%)
+    &_active
+      color: #93989A
+      cursor: default
+      pointer-events: none
+      padding-right: 18px
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        margin: auto
+        width: 15px
+        height: 15px
+        background: url('~/assets/check.svg') center no-repeat
+        background-size: 15px 15px
+      &:hover
+        color: #93989A
+    &_red
+      color: #F3423C
+      &:hover
+        color: #F3423C
+    &_disabled
+      color: #93989A
+  @media (min-width: 768px)
+    .header &
+      min-width: 195px
+

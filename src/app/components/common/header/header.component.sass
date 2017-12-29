@@ -1,0 +1,57 @@
+\:host
+  display: block
+  overflow: visible
+
+.header
+  height: 90px
+  font-size: 0
+  background: #fff
+  padding-top: 17px
+  overflow: visible
+  &__add-company
+    font-size: 16px
+    color: #309FFF
+    cursor: pointer
+    padding-top: 6px
+  &__side
+    display: inline-block
+    vertical-align: top
+    font-size: 16px
+    &_left
+      width: 70%
+      text-align: left
+    &_right
+      width: 30%
+      text-align: right
+
+.menu
+  font-size: 0
+  &__item
+    display: inline-block
+    vertical-align: top
+    font-size: 15px
+    color: #93989A
+    cursor: pointer
+    position: relative
+    &:focus
+      outline: none
+    &:not(:last-child)
+      margin-right: 20px
+    &_active
+      color: #309FFF
+      &:before
+        content: ''
+        width: 100%
+        height: 2px
+        background: #309FFF
+        position: absolute
+        bottom: -21px
+        left: 0
+        z-index: 2
+    &:hover
+      cursor: pointer
+    &_active
+      cursor: no-drop
+
+.noSelect
+  height: 36px

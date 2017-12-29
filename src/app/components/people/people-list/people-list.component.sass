@@ -1,0 +1,281 @@
+\:host
+  display: block
+  overflow: hidden
+
+pre
+  white-space: pre-wrap
+
+.not-people
+  padding: 70px 0 0 0
+
+.flex
+  padding: 15px 0 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+.text-left
+  text-align: left
+
+.text-right
+  text-align: right
+
+.number
+  margin-right: 15px
+  font-size: 15px
+  color: #93989A
+
+.title
+  font-size: 15px
+  color: #202222
+  margin-right: 15px
+
+.link-header
+  margin-left: 15px
+  color: #1e9efb
+  cursor: pointer
+  &:focus
+    outline: none
+  &:hover
+    color: #82c9fd
+  &_disabled
+    pointer-events: none
+    color: #989d9f
+  @media (max-width: 330px)
+    width: 60px
+    display: inline-block
+    vertical-align: middle
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+
+
+
+
+.people
+  &__wrapper
+    position: relative
+  &__header
+    min-height: 60px
+    justify-content: space-between
+    display: flex
+    align-items: center
+    font-size: 15px
+    color: #93989A
+    border-bottom: 1px solid #CCD0D2
+    &-search
+      position: relative
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      vertical-align: middle
+      &-input
+        position: static
+        transition: text-align 0.5s cubic-bezier(.25, .8, .25, 1)
+        height: 35px
+        padding: 5px 0
+        max-width: 200px
+        width: 100%
+        text-align: right
+        border-color: transparent
+        border-radius: 4px
+        margin-right: 3px
+        &:focus, &_not-empty
+          text-align: left
+          border: 1px solid #CCD0D2
+          padding: 5px 12px
+      &-btn
+        position: relative
+        display: inline-block
+        vertical-align: middle
+        width: 15px
+        height: 15px
+        cursor: pointer
+        &_icon-search
+          background: url("../../../../assets/search.svg") center 65% no-repeat
+          background-size: 11px 11px
+        &_icon-close
+          background: url("../../../../assets/close.svg") center 77% no-repeat
+          background-size: 11px 13px
+  &__list
+    position: relative
+  &__item
+    padding: 9px 10px 9px 105px
+    align-items: center
+    border-bottom: 1px solid #CCD0D2
+    position: relative
+    padding-right: 20px
+    min-height: 68px
+    zoom: 1
+    &:before, &:after
+      content: ""
+      display: table
+    &:after
+      clear: both
+  &__checkbox
+    position: absolute
+    left: 0
+    top: 24px
+  &__initials
+    font-weight: 600
+    font-size: 17px
+    color: #FFFFFF
+    letter-spacing: 0.15px
+    text-transform: uppercase
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+  &__avatar-box
+    width: 50px
+    height: 50px
+    overflow: hidden
+    border-radius: 50%
+    content: attr(data-parent)
+    background: linear-gradient(to right, lighten(#309FFF, 15%), #309FFF)
+    margin-right: 20px
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    left: 37px
+    top: 9px
+    &[data-color="58c9ef"]
+      background: linear-gradient(to right, lighten(#58c9ef, 15%), #58c9ef)
+    &[data-color="2be39c"]
+      background: linear-gradient(to right, lighten(#2be39c, 15%), #2be39c)
+    &[data-color="a457ec"]
+      background: linear-gradient(to right, lighten(#a457ec, 15%), #a457ec)
+    &[data-color="ffbe42"]
+      background: linear-gradient(to right, lighten(#ffbe42, 15%), #ffbe42)
+    &[data-color="e9d340"]
+      background: linear-gradient(to right, lighten(#e9d340, 15%), #e9d340)
+    &[data-color="3cd861"]
+      background: linear-gradient(to right, lighten(#3cd861, 15%), #3cd861)
+    &[data-color="f946e9"]
+      background: linear-gradient(to right, lighten(#f946e9, 15%), #f946e9)
+    &[data-color="00cdbb"]
+      background: linear-gradient(to right, lighten(#00cdbb, 15%), #00cdbb)
+    &[data-color="fd524f"]
+      background: linear-gradient(to right, lighten(#fd524f, 15%), #fd524f)
+    &[data-color="6c6ced"]
+      background: linear-gradient(to right, lighten(#6c6ced, 15%), #6c6ced)
+
+  &__avatar
+    width: 100%
+    display: block
+    min-width: 100%
+    min-height: 100%
+  &__name
+    color: #202222
+    font-size: 17px
+    letter-spacing: -0.41px
+    line-height: 19px
+    padding-top: 4px
+    margin-bottom: 3px
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+  &__extra-text
+    color: #93989A
+    font-size: 15px
+    overflow: hidden
+    line-height: 19px
+    white-space: nowrap
+    text-overflow: ellipsis
+    > span:not(:last-child):after
+      content: ', '
+  &__control
+    position: absolute
+    right: 0
+    top: 21px
+    margin: auto
+
+pre
+  margin: 0
+  padding: 0
+
+.wrapper_content
+  padding-top: 10px
+  padding-bottom: 100px
+
+.show-sm
+  display: none !important
+  @media (min-width: 576px)
+    display: block !important
+
+.not-found
+  font-size: 20px
+  padding: 40px 10px
+  color: #93989a
+  text-align: center
+
+
+
+.fileContainer
+  overflow: hidden
+  position: relative
+  vertical-align: top
+  font-size: 15px
+  text-align: left
+  color: #1e9efb
+  letter-spacing: 0
+  padding: 0
+  display: inline-block
+  cursor: pointer
+  &:hover
+    color: #82c9fd
+  &.btn_large
+    display: flex
+    color: #fff
+    &:hover
+      color: #fff
+  [type=file]
+    display: block
+    font-size: 999px
+    filter: alpha(opacity=0)
+    opacity: 0
+    position: absolute
+    overflow: hidden
+    left: 0
+    top: 0
+    height: 1px
+    width: 1px
+
+
+
+
+.link
+  margin-left: 10px
+  @media (min-width: 576px)
+    margin-left: 13px
+  @media (max-width: 577px)
+    &_trash
+      vertical-align: middle
+      display: inline-block
+      width: 15px
+      height: 15px
+      font-size: 0
+      background: url("../../../../assets/trash.svg") center center no-repeat
+      background-size: 15px 15px
+    &_send
+      vertical-align: middle
+      display: inline-block
+      font-size: 0
+      width: 15px
+      height: 15px
+      background: url("../../../../assets/send.svg") center center no-repeat
+      background-size: 15px 15px
+
+@media (max-width: 577px)
+  .people__header .checkbox-group
+    min-width: 168px
+
+@media (max-width: 400px)
+  .people__selected
+    width: 82px
+    display: inline-block
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+    vertical-align: middle
