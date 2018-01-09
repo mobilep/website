@@ -1,54 +1,19 @@
-$(document).ready(() => {
-  $('.header__btn').click(clickHeaderBtn);
+let headerButton;
 
-  var $scrollStatus = $('.scroll-status');
-
-  let top = 70;
-  if($('body').width() > 767) {
-    top = 90;
-  }
-
-  $('.header__nav').navScroll({
-    mobileDropdown: true,
-    mobileBreakpoint: 768,
-    scrollSpy: true,
-    navHeight: top,
-    onScrollStart: () => {
-      $scrollStatus.show();
-      $scrollStatus.text('Started scrolling');
-    },
-    onScrollEnd: () => {
-      $scrollStatus.text('Scrolling ended');
-      setTimeout(() => {
-        $scrollStatus.fadeOut(200);
-      }, 1000);
-    }
-  });
-
-  $('.header__nav').on('click', '.header__a', e => {
-    e.preventDefault();
-    $('.header__nav ul').slideToggle('fast');
-    $(e.target).closest('body').removeClass('header__btn_active');
-    $(e.target).closest('body').find('.header__btn').toggleClass('header__btn_active');
-  });
-});
-
-$(window).on('load resize scroll', () => {
-  headerSticky();
-});
-
-
-function clickHeaderBtn() {
-  $(this).toggleClass('header__btn_active');
-  $(this).closest('body').toggleClass('header__btn_active');
-}
-
-function headerSticky() {
-  const sticky = $('.header');
-  const scroll = $(window).scrollTop();
-  if(scroll >= 1) {
-    sticky.addClass('header_fixed');
+function toggleMenu() {
+  if(headerButton.className.match(/header__btn_active/)) {
+    document.body.className = document.body.className.replace(/ ?header__btn_active/, '');
+    headerButton.className = headerButton.className.replace(/ ?header__btn_active/, '');
   } else {
-    sticky.removeClass('header_fixed');
+    headerButton.className += ' header__btn_active';
+    document.body.className += ' header__btn_active';
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  headerButton = document.getElementsByClassName('js-header-button')[0];
+  headerButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    toggleMenu();
+  });
+});

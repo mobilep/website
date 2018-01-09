@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ _title }} — Mobile Practice</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory-->
+    <!-- build:css styles/vendor.css-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,600,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <!-- endbuild-->
+    <!-- build:css styles/main.css-->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild-->
+</head>
+
+<body class="body-{{ _body }}">
+<div class="wrapper">
+    <div class="header">
+        <div class="container">
+            <div class="flex flex_between flex_v-center">
+                <div class="flex-side">
+                    <a href="/" class="header__logo">Mobile Practice</a>
+                </div>
+                <div class="flex-side">
+                    <div class="header__btn">
+                        <span class="header__btn_section"></span>
+                        <span class="header__btn_section"></span>
+                        <span class="header__btn_section"></span>
+                        <span class="header__btn_section"></span>
+                        <span class="header__btn_section"></span>
+                        <span class="header__btn_section"></span>
+                    </div>
+                    <ul class="header__nav">
+                        <li class="header__li">
+                            <a href="#section-2" class="header__a">What we do</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#section-3" class="header__a">How it works</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#section-4" class="header__a">Features</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#section-5" class="header__a">About us</a>
+                        </li>
+                        <li class="header__li">
+                            <a href="#section-6" class="header__a">Contacts</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% block main %}{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__box">
+                <div class="social footer__social">
+                    <a href="#" class="social__item social__item_in"></a>
+                    <a href="#" class="social__item social__item_tw"></a>
+                    <a href="#" class="social__item social__item_fb"></a>
+                </div>
+                <div class="footer__flex">
+                    <a href="/" class="logo footer__logo">logo</a>
+                    <p class="footer__text">© 2018 Mobile Practice. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- build:js scripts/vendor.js-->
+<!--<script src="/bower_components/jquery/dist/jquery.js"></script>-->
+<!--<script src="/bower_components/jquery-navScroll/jquery.navScroll.js"></script>-->
+<!-- endbuild-->
+<!-- build:js scripts/main.js-->
+<!--<script src="scripts/main.js"></script>-->
+<!-- endbuild-->
+</body>
+
+</html>
