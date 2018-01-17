@@ -36,17 +36,10 @@
     height: 70vh;
 }
 
-.hero__phone {
-    margin-bottom: -60px;
-    margin-right: -14px;
-    height: 60vh;
-    min-height: 480px;
-}
-
 .phone {
     position: relative;
     text-align: center;
-    width: 300px;
+    width: 100%;
 }
 
 .phone__outline {
@@ -89,6 +82,60 @@
     width: 100%;
 }
 
+.phone--hero {
+    margin-bottom: -60px;
+    margin-right: -7px;
+    width: 32vh;
+    min-width: 250px;
+    float: right;
+}
+
+.phone--hiw {
+    width: 32vh;
+    min-width: 250px;
+    margin-left: -10px;
+}
+
+.section__header {
+    margin: 60px 0;
+    line-height: 1em;
+}
+
+.hiw__header {
+    color: #fff;
+}
+
+.hiw__copy {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.section--hiw {
+    padding-bottom: 60px;
+}
+
+.hiw__number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    color: $color__red;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: .5em;
+    line-height: 30px;
+}
+
+.phone--hiw-3 .phone__inside {
+    &:after {
+        background-color: #F6F6F6;
+    }
+}
+
+
+
+
 .nav {
     position: absolute;
     top: 0;
@@ -129,6 +176,10 @@
 
 .wwd__image {
     width: 100%;
+}
+
+.background--red {
+    background-image: linear-gradient(-135deg, #FA384D 0%, #FA513C 100%)
 }
 
 

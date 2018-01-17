@@ -117,12 +117,12 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', ['build'], () => {
-    gulp.watch('app/views/**/*.html', ['html-only']);
-    gulp.watch('app/styles/**/*.s*', ['styles']);
-    gulp.watch('app/scripts/**/*.js', ['scripts']);
-    gulp.watch('app/fonts/**/*', ['fonts']);
-    gulp.watch('app/images/**/*', ['images']);
-    gulp.watch('bower.json', ['wiredep', 'fonts']);
+    gulp.watch('app/views/**/*.html', { usePolling: true }, ['html-only']);
+    gulp.watch('app/styles/**/*.s*', { usePolling: true }, ['styles']);
+    gulp.watch('app/scripts/**/*.js', { usePolling: true }, ['scripts']);
+    gulp.watch('app/fonts/**/*', { usePolling: true }, ['fonts']);
+    gulp.watch('app/images/**/*', { usePolling: true }, ['images']);
+    gulp.watch('bower.json', { usePolling: true }, ['wiredep', 'fonts']);
 });
 
 gulp.task('serve:dist', ['default'], () => {
