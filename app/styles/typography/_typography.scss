@@ -1,0 +1,30 @@
+$font__main: "Open Sans", sans-serif;
+$font__bold: "Open Sans", sans-serif;
+
+$font__line-height-body: 1.9;
+$font__line-height-pre: 1.6;
+
+body,
+button,
+input,
+select,
+li,
+textarea {
+    color: $color__text-main;
+    font-family: $font__main;
+    font-size: 16px;
+    line-height: $font__line-height-body;
+}
+
+a {
+    color: $color__red;
+    text-decoration: none;
+    &:hover, &:focus {
+        text-decoration: underline;
+    }
+}
+
+h2 {
+    font-size: 38px;
+    font-weight: normal;
+}

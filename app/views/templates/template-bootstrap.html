@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ _title }} — Mobile Practice</title>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Place favicon.ico in the root directory-->
+    <!-- build:css /styles/vendor.css-->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css"/>
+    <link href="/styles/bootstrap.min.css" rel="stylesheet">
+    <!-- endbuild-->
+    <!-- build:css /styles/mp.css-->
+    <link rel="stylesheet" href="/styles/mp.css">
+    <!-- endbuild-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="nav">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="nav__logo">
+                    <img src="/images/logo-white.svg">
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section-2">What we do</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section-3">How it works</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section-4">Features</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section-5">About us</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="#section-6">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="row hero__items u-aligner">
+            <div class="hero__copy u-aligner--bottom col-md-8">
+                <h1 class="hero__header">Mobile technology for teams to practice, share and coach each other, anytime,
+                    anywhere.</h1>
+                <a href="" class="btn hero__button">Book a demo</a>
+            </div>
+            <div class="col-md-4 u-aligner--bottom u-text-right">
+                <img class="hero__phone" src="/images/hero-phone.png">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <h2 class="u-text-center">What we do & how we do it</h2>
+
+            <div class="wwd__items u-aligner">
+                <div class="col-md-3 u-text-center">
+                    <div class="round-icon">
+                        <img src="images/svg/make_personal.svg" alt="make personal" class="section-2__img">
+                    </div>
+                    <p>Make personal & professional development an easy, integrated & valued part of everyday business
+                        life.</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="wwd__image" src="images/png/section-2.png" alt="">
+                </div>
+
+                <div class="col-md-3 u-text-center">
+                    <div class="round-icon">
+                        <img src="images/svg/providing.svg" alt="providing">
+                    </div>
+                    <p>By providing more opportunities for more people to practice, share &
+                        coach each other for personal & team performance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="wrapper">
+
+    {% block main %}{% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__box">
+                <div class="social footer__social">
+                    <a href="#" class="social__item social__item_in"></a>
+                    <a href="#" class="social__item social__item_tw"></a>
+                    <a href="#" class="social__item social__item_fb"></a>
+                </div>
+                <div class="footer__flex">
+                    <a href="/" class="logo footer__logo">logo</a>
+                    <p class="footer__text">© 2018 Mobile Practice. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- build:js /scripts/main.js-->
+<script src="scripts/main.js"></script>
+<!-- endbuild-->
+</body>
+
+</html>

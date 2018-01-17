@@ -13,7 +13,7 @@ const reload = browserSync.reload;
 let dev = true;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/main.sass')
+  return gulp.src('app/styles/mp.scss')
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.sass.sync({
@@ -64,6 +64,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
 gulp.task('html-only', [], () => {
     return gulp.src('app/views/**/*.html')
         .pipe(nunjucks.compile())
+        .pipe($.useref({ searchPath: ['app', '.'] }))
         .pipe(gulp.dest('dist'));
 });
 
@@ -108,7 +109,6 @@ gulp.task('serve', () => {
       'app/images/**/*'
     ]).on('change', reload);
 
-    // gulp.watch('app/views/**/*.pug', ['views']);
     gulp.watch('app/styles/**/*.s*', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
@@ -116,11 +116,12 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', ['build'], () => {
     gulp.watch('app/views/**/*.html', ['html-only']);
     gulp.watch('app/styles/**/*.s*', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
+    gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
