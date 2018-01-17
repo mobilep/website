@@ -32,13 +32,61 @@
 }
 
 .hero__items {
-    min-height: 650px;
+    min-height: 500px;
+    height: 70vh;
 }
 
 .hero__phone {
-    width: 300px;
     margin-bottom: -60px;
     margin-right: -14px;
+    height: 60vh;
+    min-height: 480px;
+}
+
+.phone {
+    position: relative;
+    text-align: center;
+    width: 300px;
+}
+
+.phone__outline {
+    position: absolute;
+    top: 0;
+}
+
+.phone__outline__image {
+    width: 100%;
+}
+
+.phone__inside__before {
+    padding-bottom: 8%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.phone__inside {
+    text-align: center;
+    padding: 7% 9% 5% 8.3%;
+
+    &:before {
+        padding-bottom: 10%;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        content: "";
+    }
+
+    &:after {
+        padding-bottom: 5%;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        content: "";
+    }
+}
+
+.phone__inside__image {
+    width: 100%;
 }
 
 .nav {
