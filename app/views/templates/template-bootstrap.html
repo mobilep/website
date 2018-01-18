@@ -39,25 +39,26 @@
     <header class="nav{% if _body %} nav--{{ _body }}{% endif %}">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-5">
+                <div class="col-md-3 col-sm-5 col-xs-10">
                     <a href="/{{ _lang }}/" class="nav__logo"></a>
                 </div>
-                <div class="col-md-9 col-sm-7">
-                    <ul class="nav__items">
+                <div class="col-md-9 col-sm-7 col-xs-2">
+                    <div class="nav__button js-nav-button"></div>
+                    <ul class="nav__items js-nav">
                         <li class="nav__item">
-                            <a class="nav__link" href="/{{ _lang }}/#what-we-do">What we do</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#what-we-do">What we do</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="/{{ _lang }}/#how-it-works">How it works</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#how-it-works">How it works</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="/{{ _lang }}/#features">Features</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#features">Features</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="/{{ _lang }}/#about-us">About us</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#about-us">About us</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link" href="mailto:{{ contact_email }}">Contact</a>
+                            <a class="nav__link js-nav-item" href="mailto:{{ contact_email }}">Contact</a>
                         </li>
                     </ul>
                 </div>

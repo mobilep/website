@@ -98,14 +98,14 @@
 .phone--hero {
     margin-bottom: -60px;
     margin-right: -7px;
-    width: 27vh;
-    min-width: 250px;
+    width: 25vh;
     float: right;
 }
 
 @media (min-width: $medium) {
-    .phone--her {
+    .phone--hero {
         width: 32vh;
+        min-width: 250px;
     }
 }
 
