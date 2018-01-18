@@ -40,7 +40,13 @@
 
 .hero__items {
     min-height: 500px;
-    height: 70vh;
+    height: 60vh;
+}
+
+@media (min-width: $medium) {
+    .hero__items {
+        height: 70vh;
+    }
 }
 
 .phone {
@@ -92,10 +98,17 @@
 .phone--hero {
     margin-bottom: -60px;
     margin-right: -7px;
-    width: 32vh;
+    width: 27vh;
     min-width: 250px;
     float: right;
 }
+
+@media (min-width: $medium) {
+    .phone--her {
+        width: 32vh;
+    }
+}
+
 
 .phone--hiw {
     width: 100%;

@@ -42,8 +42,8 @@
         <div class="row">
             <h2 class="u-text-center section__header section__header--white hiw__header">How it works?</h2>
             <div class="hiw__items">
-                <div class="col-md-4 hiw__item">
-                    <p class="hiw__copy"><span class="hiw__number">1</span>Create & distribute scenarios</p>
+                <div class="col-sm-4 hiw__item">
+                    <p class="hiw__copy"><span class="hiw__number">1</span>Create & share scenarios</p>
                     <div class="hiw__figure">
                         <div class="phone phone--hiw phone--hiw--1">
                             <div class="phone__inside">
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hiw__item">
+                <div class="col-sm-4 hiw__item">
                     <p class="hiw__copy"><span class="hiw__number">2</span>Practice, record & submit</p>
                     <div class="hiw__figure">
                         <div class="phone phone--hiw">
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 hiw__item">
+                <div class="col-sm-4 hiw__item">
                     <p class="hiw__copy"><span class="hiw__number">3</span>Review feedback & share</p>
                     <div class="hiw__figure">
                         <div class="phone phone--hiw phone--hiw-3">
@@ -140,7 +140,7 @@
             <h2 class="u-text-center section__header features__header">Features</h2>
             <div class="feature__items">
                 {% for _feature in _features %}
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <div class="feature__item o-box">
                         <img src="/images/svg/{{ _feature.svg }}" alt="img" class="feature__image">
                         <h3 class="feature__title">{{ _feature.title }}</h3>
@@ -184,7 +184,7 @@
             <h2 class="u-text-center section__header about__header">About Us</h2>
             <div class="about__items">
                 {% for _person in _us %}
-                <div class="col-md-4">
+                <div class="col-sm-4">
                     <div class="about__item o-box">
                         <img src="{{ _person.image }}" alt="{{ _person.name }}" class="about__image">
                         <h3 class="about__name"><a href="mailto:{{ _person.email }}">{{ _person.name }}</a></h3>
