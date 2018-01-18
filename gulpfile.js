@@ -12,6 +12,12 @@ const reload = browserSync.reload;
 
 let dev = true;
 
+function nunjucksData() {
+  return {
+      year: new Date().getFullYear()
+  };
+}
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/mp.scss')
     .pipe($.plumber())
@@ -56,14 +62,14 @@ gulp.task('lint:test', () => {
 
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/views/**/*.html')
-    .pipe(nunjucks.compile())
+    .pipe(nunjucks.compile(nunjucksData()))
     .pipe($.useref({ searchPath: ['app', '.'] }))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html-only', [], () => {
     return gulp.src('app/views/**/*.html')
-        .pipe(nunjucks.compile())
+        .pipe(nunjucks.compile(nunjucksData()))
         .pipe($.useref({ searchPath: ['app', '.'] }))
         .pipe(gulp.dest('dist'));
 });

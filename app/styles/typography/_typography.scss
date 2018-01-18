@@ -1,7 +1,7 @@
 $font__main: "Open Sans", sans-serif;
 $font__bold: "Open Sans", sans-serif;
 
-$font__line-height-body: 1.9;
+$font__line-height-body: 1.6;
 $font__line-height-pre: 1.6;
 
 body,
@@ -21,10 +21,16 @@ a {
     text-decoration: none;
     &:hover, &:focus {
         text-decoration: underline;
+        color: #8C2F37;
+        transition: 400ms;
     }
 }
 
 h2 {
     font-size: 38px;
     font-weight: bold;
+}
+
+h3 {
+    line-height: 1.2em;
 }
