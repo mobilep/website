@@ -1,6 +1,4 @@
 .nav {
-    position: absolute;
-    top: 0;
     width: 100%;
     margin-top: 20px;
 }
@@ -18,12 +16,40 @@
 }
 
 .nav__link {
-    font-size: 12px;
-    color: #fff;
+    font-size: 10px;
+    color: $color__text-main;
     text-transform: uppercase;
     &:hover, &:focus {
         text-decoration: none;
     }
+}
+
+@media (min-width: $medium) {
+    .nav__link {
+        font-size: 12px;
+    }
+}
+
+
+.nav__logo {
+    background-image: url(/images/logo.svg);
+    background-repeat: no-repeat;
+    display: block;
+    width: 232px;
+    height: 52px;
+}
+
+.nav--home .nav__logo {
+    background-image: url(/images/logo-white.svg);
+}
+
+.nav--home {
+    position: absolute;
+    top: 0;
+}
+
+.nav--home .nav__link {
+    color: #fff;
 }
 
 .footer {
@@ -65,6 +91,11 @@
 .footer__social-items {
     margin-left: auto;
     line-height: 0;
+}
+
+.footer__nav__active {
+    text-decoration-skip: ink;
+    text-decoration: underline;
 }
 
 .footer__app-store {

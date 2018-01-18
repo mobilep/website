@@ -14,7 +14,8 @@ let dev = true;
 
 function nunjucksData() {
   return {
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
+      contact_email: "contact@mobilepractice.io",
   };
 }
 

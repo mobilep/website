@@ -1,6 +1,7 @@
 {% extends "./templates/template-bootstrap.html" %}
 {% set _title = "Welcome" %}
 {% set _body = "home" %}
+{% set _lang = "fr" %}
 
 {% block main %}
 
@@ -27,7 +28,7 @@
 </section>
 
 <section class="section section--what">
-    <div class="container">
+    <div id="what-we-do" class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 u-text-center">
                 <p class="what__copy">Easily integrate personal & professional development into everyday business life.</p>
@@ -36,7 +37,7 @@
     </div>
 </section>
 
-<section class="background--red section--hiw">
+<section id="how-it-works" class="background--red section--hiw">
     <div class="container">
         <div class="row">
             <h2 class="u-text-center section__header section__header--white hiw__header">How it works?</h2>
@@ -133,7 +134,7 @@
     }
 
 ] %}
-<section id="section-4">
+<section id="features">
     <div class="container">
         <div class="row">
             <h2 class="u-text-center section__header features__header">Features</h2>
@@ -177,7 +178,7 @@
 
 ] %}
 
-<section id="section-5" class="section--about background--grey">
+<section id="about" class="section--about background--grey">
     <div class="container">
         <div class="row">
             <h2 class="u-text-center section__header about__header">About Us</h2>
@@ -193,39 +194,6 @@
                 </div>
                 {% endfor %}
             </div>
-        </div>
-    </div>
-</section>
-
-<section class="footer background--dark-grey">
-    <div class="container">
-        <div class="row u-aligner u-aligner--start">
-
-            <div class="footer__nav--button">
-                <a href="mailto:contact@mobilepractice.io" class="btn btn--red">Book a demo</a>
-            </div>
-
-            <ul class="footer__nav footer__nav--site">
-                <li class="footer__nav__item">
-                    <a href="http://">Privacy policy</a>
-                </li>
-                <li class="footer__nav__item">
-                    <a href="http://">Help center</a>
-                </li>
-                <li class="footer__nav__item">
-                    <a href="http://">Contact us</a>
-                </li>
-            </ul>
-
-            <ul class="footer__nav footer__nav--language">
-                <li class="footer__nav__item">
-                    <a href="http://" class="section-8__a">Français</a>
-                </li>
-                <li class="footer__nav__item">
-                    <a href="http://" class="section-8__a">English</a>
-                </li>
-            </ul>
-
         </div>
     </div>
 </section>
