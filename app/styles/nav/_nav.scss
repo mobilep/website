@@ -112,9 +112,15 @@
 }
 
 .footer {
-    padding: 60px 0 67px 0;
+    padding: 20px;
     a {
         color: #fff;
+    }
+}
+
+@media (min-width: $small) {
+    .footer {
+        padding: 60px 0 67px 0;
     }
 }
 
