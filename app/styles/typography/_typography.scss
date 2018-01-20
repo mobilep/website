@@ -1,0 +1,42 @@
+$font__main: "Open Sans", sans-serif;
+$font__bold: "Open Sans", sans-serif;
+
+$font__line-height-body: 1.6;
+$font__line-height-pre: 1.6;
+
+body,
+button,
+input,
+select,
+li,
+textarea {
+    color: $color__text-main;
+    font-family: $font__main;
+    font-size: 14px;
+    line-height: $font__line-height-body;
+}
+
+@media (min-width: $medium) {
+    .feature__copy {
+        font-size: 16px;
+    }
+}
+
+a {
+    color: $color__red;
+    text-decoration: none;
+    &:hover, &:focus {
+        text-decoration: underline;
+        color: #8C2F37;
+        transition: 400ms;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h3 {
+    line-height: 1.2em;
+}

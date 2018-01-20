@@ -1,0 +1,41 @@
+.btn {
+    padding: 0 30px;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: $color__red;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: $font__bold;
+    // This is necessary for onClick events
+    // to register in mobile browsers.
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+
+    &:hover {
+        box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
+        text-decoration: none;
+        background-color: #efefef;
+        transition: 200ms;
+        color: $color__red;
+    }
+}
+
+.btn--red {
+    background-color: #FA5260;
+    color: #fff;
+    &:hover {
+        color: #fff;
+        background-color: #8C2F37;
+    }
+}
+
+
+
