@@ -14,10 +14,23 @@
     background-image: url(/images/hero.jpg);
     background-size: cover;
     background-position: 50% 0;
-    margin-bottom: 55px;
+}
+
+@media (min-width: $small) {
+    .hero {
+        margin-bottom: 55px;
+    }
 }
 
 .hero__copy {
+    margin-top: 140px;
+}
+
+@media (min-width: $small) {
+    .hero__copy {
+        margin-top: 0;
+        align-self: flex-end;
+    }
 }
 
 .hero__header {
@@ -38,9 +51,12 @@
     font-size: 20px;
 }
 
-.hero__items {
-    min-height: 500px;
-    height: 60vh;
+@media (min-width: $small) {
+    .hero__items {
+        min-height: 500px;
+        height: 60vh;
+        display: flex;
+    }
 }
 
 @media (min-width: $medium) {
@@ -48,6 +64,20 @@
         height: 70vh;
     }
 }
+
+@media (min-width: $small) {
+    .hero__phone {
+        text-align: right;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: $small) {
+    .hero__phone {
+        display: none;
+    }
+}
+
 
 .phone {
     position: relative;
@@ -112,11 +142,15 @@
 
 .phone--hiw {
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 @media (min-width: $medium) {
     .phone--hiw {
         min-width: 250px;
+        max-width: none;
+        margin: auto;
     }
 }
 
@@ -130,8 +164,15 @@
 }
 
 .section--what {
-    padding: 80px 0 120px 0;
+    padding: 60px 0;
 }
+
+@media (min-width: $small) {
+    .section--what {
+        padding: 80px 0 120px 0;
+    }
+}
+
 
 .what__header {
     margin: 0 0 1em 0;
@@ -145,8 +186,21 @@
 }
 
 @media (min-width: $medium) {
-    .hero__header {
+    .what__copy {
         font-size: 38px;
+    }
+}
+
+.hiw__item {
+    margin-bottom: 60px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: $small) {
+    .hiw__item {
+        margin-bottom: 0;
     }
 }
 
@@ -154,6 +208,13 @@
     color: #fff;
     margin-top: 0;
     margin-left: 8px;
+    text-align: center;
+}
+
+@media (min-width: $small) {
+    .hiw__copy {
+        text-align: left;
+    }
 }
 
 @media (min-width: $medium) {
@@ -246,19 +307,36 @@
     padding-bottom: 30px;
 }
 
-.about__items {
-    margin-top: 150px;
+@media (min-width: $small) {
+    .about__items {
+        margin-top: 150px;
+    }
 }
 
 .about__item {
-    height: 260px;
     text-align: center;
 }
 
+@media (min-width: $small) {
+    .about__item {
+        height: 260px;
+    }
+}
+
 .about__image {
-    width: 100px;
-    height: 100px;
-    margin-top: -80px;
+    width: 75px;
+    height: 75px;
+    float: left;
+    text-align: left;
+}
+
+@media (min-width: $small) {
+    .about__image {
+        width: 100px;
+        height: 100px;
+        margin-top: -80px;
+        float: none;
+    }
 }
 
 @media (min-width: $medium) {
@@ -266,6 +344,18 @@
         width: 150px;
         height: 150px;
         margin-top: -120px;
+    }
+}
+
+.about__text {
+    text-align: left;
+    padding-left: 120px;
+}
+
+@media (min-width: $small) {
+    .about__text {
+        text-align: center;
+        padding-left: 0;
     }
 }
 

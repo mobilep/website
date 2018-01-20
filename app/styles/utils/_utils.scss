@@ -29,6 +29,9 @@
     align-self: flex-end;
 }
 
+.u-aligner--wrap {
+    flex-wrap: wrap;
+}
 .u-text-center {
     text-align: center;
 }
@@ -36,3 +39,4 @@
 .u-text-right {
     text-align: right;
 }
+
