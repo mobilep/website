@@ -62,14 +62,14 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/views/**/*.html')
+  return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
     .pipe(nunjucks.compile(nunjucksData()))
     .pipe($.useref({ searchPath: ['app', '.'] }))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html-only', [], () => {
-    return gulp.src('app/views/**/*.html')
+    return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
         .pipe(nunjucks.compile(nunjucksData()))
         .pipe($.useref({ searchPath: ['app', '.'] }))
         .pipe(gulp.dest('dist'));
