@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const util = require('gulp-util');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync').create();
 const del = require('del');
@@ -10,7 +11,7 @@ const nunjucks = require('gulp-nunjucks');
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
-let dev = true;
+let production = !!util.env.production;
 
 function nunjucksData() {
   return {
@@ -22,14 +23,14 @@ function nunjucksData() {
 gulp.task('styles', () => {
   return gulp.src('app/styles/mp.scss')
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
+    .pipe($.if(!production, $.sourcemaps.init()))
     .pipe($.sass.sync({
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
-    .pipe($.if(dev, $.sourcemaps.write()))
+    .pipe($.if(!production, $.sourcemaps.write()))
     .pipe(gulp.dest('dist/styles'))
     .pipe(reload({ stream: true }));
 });
@@ -37,9 +38,9 @@ gulp.task('styles', () => {
 gulp.task('scripts', () => {
   return gulp.src('app/scripts/**/*.js')
     .pipe($.plumber())
-    .pipe($.if(dev, $.sourcemaps.init()))
+    .pipe($.if(!production, $.sourcemaps.init()))
     .pipe($.babel())
-    .pipe($.if(dev, $.sourcemaps.write('.')))
+    .pipe($.if(!production, $.sourcemaps.write('.')))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(reload({ stream: true }));
 });
@@ -184,7 +185,6 @@ gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', () => {
   return new Promise(resolve => {
-    dev = false;
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
 });
