@@ -67,14 +67,14 @@
 }
 
 .nav__logo {
-    background-image: url(/images/logo.svg);
+    background-image: url(/images/logo-dark.svg);
     background-repeat: no-repeat;
     display: block;
     width: 238px;
     height: 52px;
 
     font-family: "Open Sans", sans-serif;
-    color: #fff;
+    color: #333;
     font-size: 22px;
     font-weight: bold;
     padding-left: 60px;
@@ -82,13 +82,14 @@
     text-decoration: none;
 
     &:hover {
-        color: #fff;
+        color: #333;
         text-decoration: none;
     }
 }
 
 .nav--home .nav__logo {
     background-image: url(/images/logo-white.svg);
+    color: #fff;
 }
 
 .nav--home {
