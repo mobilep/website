@@ -70,8 +70,21 @@
     background-image: url(/images/logo.svg);
     background-repeat: no-repeat;
     display: block;
-    width: 232px;
+    width: 238px;
     height: 52px;
+
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 60px;
+    padding-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 }
 
 .nav--home .nav__logo {
