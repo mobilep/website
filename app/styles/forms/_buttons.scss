@@ -37,5 +37,20 @@
     }
 }
 
+.hero__button {
+    margin: 80px 0 90px 0;
+    font-size: 20px;
+}
+
+.hero__button--video {
+    background-color: #37C1F6;
+    color: #fff;
+    margin-right: 30px;
+    &:hover {
+        background-color: #34ADDC;
+        color: #fff;
+    }
+}
+
 
 

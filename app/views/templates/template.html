@@ -1,3 +1,4 @@
+{% import "./" ~ _lang ~ ".html" as _ %}
 <!DOCTYPE html>
 <html lang="{{ _lang }}">
 
@@ -54,16 +55,16 @@
                     <div class="nav__button js-nav-button"></div>
                     <ul class="nav__items js-nav">
                         <li class="nav__item">
-                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#how-it-works">How it works</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#how-it-works">{{ _.nav.how }}</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#features">Features</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#features">{{ _.nav.features }}</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#about">About us</a>
+                            <a class="nav__link js-nav-item" href="/{{ _lang }}/#about">{{ _.nav.about }}</a>
                         </li>
                         <li class="nav__item">
-                            <a class="nav__link js-nav-item" href="mailto:{{ contact_email }}">Contact</a>
+                            <a class="nav__link js-nav-item" href="mailto:{{ contact_email }}">{{ _.nav.contact }}</a>
                         </li>
                     </ul>
                 </div>
@@ -78,18 +79,18 @@
             <div class="row footer__nav__wrapper">
 
                 <div>
-                    <a href="mailto:contact@mobilepractice.io" class="btn btn--red footer__button">Book a demo</a>
+                    <a href="mailto:contact@mobilepractice.io" class="btn btn--red footer__button">{{ _.button.book }}</a>
                 </div>
 
                 <ul class="footer__nav footer__nav--site">
                     <li class="footer__nav__item">
-                        <a href="/{{ _lang }}/privacy.html">Privacy policy</a>
+                        <a href="/{{ _lang }}/privacy.html">{{ _.nav.privacy }}</a>
                     </li>
                     <li class="footer__nav__item">
-                        <a href="https://resources.mobilepractice.io/">Help center</a>
+                        <a href="https://resources.mobilepractice.io/">{{ _.nav.help }}</a>
                     </li>
                     <li class="footer__nav__item">
-                        <a href="mailto:{{ contact_email }}">Contact us</a>
+                        <a href="mailto:{{ contact_email }}">{{ _.nav.contact }}</a>
                     </li>
                 </ul>
 
@@ -110,7 +111,7 @@
         <div class="container">
             <div class="row u-aligner u-aligner--start">
                 <a href="/" class="footer__logo"><img src="/images/logo-icon-grey.svg" class="footer__logo"></a>
-                <p class="footer__copy">© {{ year }} Mobile Practice. All rights reserved.</p>
+                <p class="footer__copy">© {{ year }} Mobile Practice. {{ _.nav.rights }}.</p>
 
                 <div class="footer__app-store">
                     <a href="https://itunes.apple.com/fr/app/mobile-practice/id1286681362?l=en"><img src="/images/app-store.svg"></a>

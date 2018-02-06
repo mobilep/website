@@ -125,12 +125,12 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', ['build'], () => {
-    gulp.watch('app/views/**/*.html', { usePolling: true }, ['html-only']);
-    gulp.watch('app/styles/**/*.s*', { usePolling: true }, ['styles']);
-    gulp.watch('app/scripts/**/*.js', { usePolling: true }, ['scripts']);
-    gulp.watch('app/fonts/**/*', { usePolling: true }, ['fonts']);
-    gulp.watch('app/images/**/*', { usePolling: true }, ['images']);
-    gulp.watch('bower.json', { usePolling: true }, ['wiredep', 'fonts']);
+    gulp.watch('app/views/**/*.html', { usePolling: false }, ['html-only']);
+    gulp.watch('app/styles/**/*.s*', { usePolling: false }, ['styles']);
+    gulp.watch('app/scripts/**/*.js', { usePolling: false }, ['scripts']);
+    gulp.watch('app/fonts/**/*', { usePolling: false }, ['fonts']);
+    gulp.watch('app/images/**/*', { usePolling: false }, ['images']);
+    gulp.watch('bower.json', { usePolling: false }, ['wiredep', 'fonts']);
 });
 
 gulp.task('serve:dist', ['default'], () => {
