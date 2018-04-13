@@ -1,0 +1,123 @@
+{% include "./modal.html" %}
+
+<section class="hero">
+    <div class="container">
+        <div class="row hero__items">
+            <div class="hero__copy col-sm-8 col-xs-12">
+                <h1 class="hero__header">{{ _.homepage.title }}</h1>
+                <div class="btn hero__button hero__button--video js-modal-trigger">{{ _.button.watch }}</div>
+                <a href="mailto:contact@mobilepractice.io" class="btn hero__button hero__button--book">{{ _.button.book }}</a>
+            </div>
+            <div class="hero__phone col-sm-4 col-xs-12">
+                <div class="phone phone--hero">
+                    <div class="phone__inside">
+                        <img class="phone__inside__image" src="/images/phone-inside-hero.png">
+                    </div>
+                    <div class="phone__outline">
+                        <img class="phone__outline__image" src="/images/phone-outline.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--what">
+    <div id="what-we-do" class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 u-text-center">
+                <p class="what__copy">{{ _.homepage.what }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how-it-works" class="background--red section--hiw">
+    <div class="container">
+        <div class="row">
+            <h2 class="u-text-center section__header section__header--white hiw__header">{{ _.homepage.how.title }}</h2>
+            <div class="hiw__items">
+                <div class="col-sm-4 col-xs-12 hiw__item">
+                    <p class="hiw__copy"><span class="hiw__number">1</span>{{ _.homepage.how.one }}</p>
+                    <div class="hiw__figure">
+                        <div class="phone phone--hiw phone--hiw--1">
+                            <div class="phone__inside">
+                                <img class="phone__inside__image" src="/images/phone-inside-hiw-1.png">
+                            </div>
+                            <div class="phone__outline">
+                                <img class="phone__outline__image" src="/images/phone-outline.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 hiw__item">
+                    <p class="hiw__copy"><span class="hiw__number">2</span>{{ _.homepage.how.two }}</p>
+                    <div class="hiw__figure">
+                        <div class="phone phone--hiw">
+                            <div class="phone__inside">
+                                <img class="phone__inside__image" src="/images/phone-inside-hero.png">
+                            </div>
+                            <div class="phone__outline">
+                                <img class="phone__outline__image" src="/images/phone-outline.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-12 hiw__item">
+                    <p class="hiw__copy"><span class="hiw__number">3</span>{{ _.homepage.how.three }}</p>
+                    <div class="hiw__figure">
+                        <div class="phone phone--hiw phone--hiw-3">
+                            <div class="phone__inside">
+                                <img class="phone__inside__image" src="/images/phone-inside-hiw-3.png">
+                            </div>
+                            <div class="phone__outline">
+                                <img class="phone__outline__image" src="/images/phone-outline.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <div class="row">
+            <h2 class="u-text-center section__header features__header">{{ _.homepage.features.title }}</h2>
+            <div class="feature__items">
+                {% for _feature in _.homepage.features.items %}
+                <div class="col-sm-4 col-xs-6">
+                    <div class="feature__item o-box">
+                        <img src="/images/svg/{{ _feature.svg }}" alt="img" class="feature__image">
+                        <h3 class="feature__title">{{ _feature.title }}</h3>
+                        <p class="feature__copy">{{ _feature.copy }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section--about background--grey">
+    <div class="container">
+        <div class="row">
+            <h2 class="u-text-center section__header about__header">{{ _.homepage.about_us.title }}</h2>
+            <div class="about__items">
+                {% for _person in _.homepage.about_us.items %}
+                <div class="col-sm-4">
+                    <div class="about__item o-box">
+                        <img src="{{ _person.image }}" alt="{{ _person.name }}" class="about__image">
+                        <div class="about__text">
+                            <h3 class="about__name"><a href="mailto:{{ _person.email }}">{{ _person.name }}</a></h3>
+                            <h4 class="about__title">{{ _person.title }}</h4>
+                            <p class="about__copy">{{ _person.copy }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

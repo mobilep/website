@@ -9,6 +9,7 @@
 @import "typography/typography";
 @import "forms/forms";
 @import "nav/nav";
+@import "modal/modal";
 
 .hero {
     background-image: url(/images/hero.jpg);
@@ -44,11 +45,6 @@
     .hero__header {
         font-size: 38px;
     }
-}
-
-.hero__button {
-    margin: 80px 0 90px 0;
-    font-size: 20px;
 }
 
 @media (min-width: $small) {

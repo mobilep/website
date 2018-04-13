@@ -37,5 +37,34 @@
     }
 }
 
+.hero__button {
+    margin: 70px 0 90px 0;
+    font-size: 20px;
+}
+
+.hero__button--video {
+    background-color: #37C1F6;
+    color: #fff;
+    margin-right: 30px;
+    &:hover {
+        background-color: #34ADDC;
+        color: #fff;
+    }
+}
+
+@media (max-width: $small) {
+
+    .hero__button {
+        min-width: 210px;
+    }
+
+    .hero__button--video {
+        margin-bottom: 0;
+    }
+
+    .hero__button--book {
+        margin-top: 40px;
+    }
+}
 
 
