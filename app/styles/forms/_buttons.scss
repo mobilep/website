@@ -38,7 +38,7 @@
 }
 
 .hero__button {
-    margin: 80px 0 90px 0;
+    margin: 70px 0 90px 0;
     font-size: 20px;
 }
 
@@ -52,5 +52,19 @@
     }
 }
 
+@media (max-width: $small) {
+
+    .hero__button {
+        min-width: 210px;
+    }
+
+    .hero__button--video {
+        margin-bottom: 0;
+    }
+
+    .hero__button--book {
+        margin-top: 40px;
+    }
+}
 
 
