@@ -7,6 +7,7 @@ const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 const ghPages = require('gulp-gh-pages');
 const nunjucks = require('gulp-nunjucks');
+const concat = require('gulp-concat');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -65,39 +66,15 @@ gulp.task('lint:test', () => {
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
     .pipe(nunjucks.compile(nunjucksData()))
-    .pipe($.useref({searchPath: ['app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    })))
+    .pipe($.useref({ searchPath: ['app', '.'] }))
     .pipe(gulp.dest('dist'));
 });
 
 gulp.task('html-only', [], () => {
   return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
-    .pipe(nunjucks.compile(nunjucksData()))
-    .pipe($.useref({searchPath: ['app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    })))
-    .pipe(gulp.dest('dist'));
+      .pipe(nunjucks.compile(nunjucksData()))
+      .pipe($.useref({ searchPath: ['app', '.'] }))
+      .pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', () => {
