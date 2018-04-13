@@ -7,7 +7,6 @@ const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
 const ghPages = require('gulp-gh-pages');
 const nunjucks = require('gulp-nunjucks');
-const concat = require('gulp-concat');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -32,6 +31,7 @@ gulp.task('styles', () => {
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
     .pipe($.if(!production, $.sourcemaps.write()))
+    .pipe($.if(production, $.cssnano({safe: true, autoprefixer: false})))
     .pipe(gulp.dest('dist/styles'))
     .pipe(reload({stream: true}));
 });
@@ -67,6 +67,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
     .pipe(nunjucks.compile(nunjucksData()))
     .pipe($.useref({ searchPath: ['app', '.'] }))
+    .pipe($.if((file) => { return production && file.relative.match(/\.css$/);  }, $.cssnano({safe: true, autoprefixer: false})))
     .pipe(gulp.dest('dist'));
 });
 
@@ -74,6 +75,7 @@ gulp.task('html-only', [], () => {
   return gulp.src(['app/views/**/*.html', '!app/views/templates**/*.html'])
       .pipe(nunjucks.compile(nunjucksData()))
       .pipe($.useref({ searchPath: ['app', '.'] }))
+      .pipe($.if((file) => { return production && file.relative.match(/\.css$/);  }, $.cssnano({safe: true, autoprefixer: false})))
       .pipe(gulp.dest('dist'));
 });
 
