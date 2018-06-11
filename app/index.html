@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Mobile Practice</title>
+</head>
+<body>
+<script>
+    var lang = navigator.language || navigator.userLanguage;
+    if (lang.indexOf('fr') == 0)
+        window.location = '/fr/';
+    else
+        window.location = '/en/';
+</script>
+
+<p>
+  Welcome to Mobile Practice, please choose <a href="/en/">English</a> or <a href="/fr/">Français</a>.
+</p>
+
+</body>
+</html>
