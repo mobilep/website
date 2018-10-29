@@ -25,7 +25,7 @@
     <div id="what-we-do" class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1 u-text-center">
-                <p class="what__copy">{{ _.homepage.what }}</p>
+                <p class="what__copy">{{ _.homepage.what | escape | nl2br }}</p>
             </div>
         </div>
     </div>
