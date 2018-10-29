@@ -7,10 +7,13 @@
 - gulp serve:dist --prod
 - gulp serve  --- devel
 
+##
+./g watch
+
 
 ## Deploy
 From website repository directory
-gulp build --production
-rsync -avh dist/ ../mobilep.github.io/ --delete --exclude .git --exclude CNAME --exclude .DS_Store
-
+1. ./g build --production
+2. rsync -avh dist/ ../mobilep.github.io/ --delete --exclude .git --exclude CNAME --exclude .DS_Store
+3. Then commit & push from mobilep.github.io 
 
