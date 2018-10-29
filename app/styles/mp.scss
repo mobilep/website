@@ -32,6 +32,10 @@
         margin-top: 0;
         align-self: flex-end;
     }
+
+    .hero__copy--post {
+        align-self: center;
+    }
 }
 
 .hero__header {
@@ -53,11 +57,19 @@
         height: 60vh;
         display: flex;
     }
+
+    .hero__items--post {
+        height: 40vh;
+    }
 }
 
 @media (min-width: $medium) {
     .hero__items {
         height: 70vh;
+    }
+
+    .hero__items--post {
+        height: 50vh;
     }
 }
 
