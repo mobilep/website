@@ -14,6 +14,6 @@
 ## Deploy
 From website repository directory
 1. ./g build --production
-2. rsync -avh dist/ ../mobilep.github.io/ --delete --exclude .git --exclude CNAME --exclude .DS_Store
+2. rsync -avh dist/ ../mobilep.github.io/ --delete --exclude .git --exclude CNAME --exclude .DS_Store --exclude .gitignore --exclude "Mobile\ Practice\ Setup*"
 3. Then commit & push from mobilep.github.io 
 
